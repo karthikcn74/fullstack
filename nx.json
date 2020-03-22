@@ -1,0 +1,28 @@
+{
+  "npmScope": "mono-repo",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "ux-hm": {
+      "tags": []
+    },
+    "ux-hm-e2e": {
+      "tags": [],
+      "implicitDependencies": ["ux-hm"]
+    },
+    "api": {
+      "tags": []
+    },
+    "api-interfaces": {
+      "tags": []
+    }
+  }
+}
