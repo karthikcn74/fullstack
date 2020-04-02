@@ -11,17 +11,20 @@
     "nx.json": "*"
   },
   "projects": {
-    "ux-hm": {
+    "ux-mobile": {
       "tags": []
     },
-    "ux-hm-e2e": {
+    "ux-mobile-e2e": {
       "tags": [],
-      "implicitDependencies": ["ux-hm"]
+      "implicitDependencies": ["ux-mobile"]
     },
     "api": {
       "tags": []
     },
     "api-interfaces": {
+      "tags": []
+    },
+    "core": {
       "tags": []
     }
   }

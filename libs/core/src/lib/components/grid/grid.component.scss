@@ -1,0 +1,29 @@
+ion-grid {
+    padding: 0rem .625rem 0rem .625rem;
+    & ion-col:nth-of-type(2) {
+        text-align: right;
+    }
+}
+
+ion-grid[class~="brand"] {
+    & ion-row {
+        & ion-col{
+            & div {
+                & i{
+                    font-size: 2.5rem; 
+                }
+            }
+            text-align: center;
+        }
+    }
+    & ion-row:nth-child(1) {
+        & ion-col:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+    }
+    & ion-row:nth-child(2) {
+        & ion-col:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    }
+}

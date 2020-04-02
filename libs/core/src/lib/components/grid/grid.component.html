@@ -1,0 +1,20 @@
+<ion-grid mode="md">
+  <ion-row>
+    <ion-col>
+      Featured Brands
+    </ion-col>
+    <ion-col>
+      <a routerLink="/crisis-center">View All</a>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<ion-grid class="brand">
+  <ion-row *ngFor="let row of gridObj">
+    <ion-col *ngFor="let col of row" (click)="itemSelected(col)">
+      <div>
+        <i [ngClass]="col.logo"></i>
+        <h5>{{ col.name }}</h5>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
