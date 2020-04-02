@@ -1,0 +1,5 @@
+<ion-slides mode="md" [options]="slideOptions" pager="true" #slider (ionSlidesDidLoad)="slidesDidLoad(slider)">
+  <ion-slide *ngFor="let img of images">
+    <ion-img [src]=" img.image "></ion-img>
+  </ion-slide>
+</ion-slides>

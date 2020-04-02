@@ -1,0 +1,35 @@
+<ion-grid mode="md">
+  <ion-row>
+    <ion-col>
+      Featured Cars
+    </ion-col>
+    <ion-col>
+      <a routerLink="/crisis-center">View All</a>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<ion-segment scrollable (ionChange)="segmentChanged($event)" mode="md" >
+  <ion-segment-button *ngFor="let prod of products" [value]="prod">
+    <ion-card>
+      <img [src]="prod.images[0]" />
+      <ion-card-header>
+        <ion-card-title>{{prod.name}}</ion-card-title>
+        <!-- <ion-card-subtitle color="primary">{{mg.Price | currency}}</ion-card-subtitle> -->
+      </ion-card-header>
+      <ion-card-content>
+
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-icon name="calendar-outline"></ion-icon> {{prod.year}}
+            </ion-col>
+            <ion-col>
+              <ion-icon name="speedometer-outline"></ion-icon> {{prod.other1}}
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+  </ion-segment-button>
+</ion-segment>

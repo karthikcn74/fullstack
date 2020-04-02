@@ -1,6 +1,6 @@
 import { Controller, Get } from '@nestjs/common';
 
-import { Message } from '@mono-repo/api-interfaces';
+import { Message } from '@uxhm/api-interfaces';
 
 import { AppService } from './app.service';
 

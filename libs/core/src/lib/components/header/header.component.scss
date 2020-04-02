@@ -1,0 +1,9 @@
+ion-toolbar {
+    & ion-title {
+        padding: 0px;
+        text-transform: capitalize;
+        text-align: center;
+    }
+    height: 3.125rem;
+    min-height: 3.125rem;
+}

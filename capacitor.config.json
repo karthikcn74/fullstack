@@ -1,0 +1,8 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "ux-mobile",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "dist\\apps\\ux-mobile",
+  "cordova": {}
+}

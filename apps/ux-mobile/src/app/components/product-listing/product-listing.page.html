@@ -1,0 +1,17 @@
+<ui-hm-header [model]='header' (callback)="onHeaderEvents($event)"></ui-hm-header>
+
+<ion-content fullscreen>
+    <ion-list>
+
+      <ion-item *ngFor="let product of productsFacade.productsByBrand$ | async" (click)="getCarDetails(product)">
+        <ion-thumbnail slot="start">
+            <img [src]="product.images[0]" />
+        </ion-thumbnail>
+        <ion-label>
+          <h2>{{product.name}}</h2>
+          <!-- <h3>{{item.Price | currency}}</h3> -->
+          <p><ion-icon name="calendar-outline"></ion-icon> {{product.year}} <ion-icon name="speedometer-outline"></ion-icon> {{product.other1}}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+</ion-content>

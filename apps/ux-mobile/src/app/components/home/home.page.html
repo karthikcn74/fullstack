@@ -1,0 +1,15 @@
+<ui-hm-header [model]='model' callback="OnHeaderEvents($event)"></ui-hm-header>
+
+<ion-content [fullscreen]="true">
+  <div *ngIf="startupFacade.allStartup$ | async as images ">
+    <ui-hm-slide [images]="images"></ui-hm-slide>
+  </div>
+  <ion-searchbar placeholder="Search car" [animated]="true" mode="md"></ion-searchbar>
+  <div *ngIf="productsFacade.allProducts$ | async as products">
+    <ui-hm-thumbnail [products]="products" (callback)="getCarDetails($event)" ></ui-hm-thumbnail>
+  </div>
+  <div *ngIf="brandsFacade.allBrands$ | async as brands">
+    <!-- <pre>{{brands | json}}</pre> -->
+    <ui-hm-grid [gridlist]="brands" [rowcol]="rowcol" (callback)="getBrand($event)"></ui-hm-grid>
+  </div>
+</ion-content>
