@@ -6,10 +6,12 @@
 import { NestFactory } from '@nestjs/core';
 import { ExpressAdapter } from '@nestjs/platform-express'
 import { AppModule } from './app/app.module';
+import * as gCloudDebug from '@google-cloud/debug-agent';
 
 import * as Express from 'express';
 
-const server = Express()
+gCloudDebug.start();
+const server = Express();
 server.get('/', (req, res) => res.send('ok'));
 server.get('/_ah/health', (req, res) => res.send('ok'));
 
