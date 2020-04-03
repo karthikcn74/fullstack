@@ -16,5 +16,4 @@
 # Node.js dependencies:
 node_modules/
 android/
-apps/
-libs/
+dist/apps/ux-mobile

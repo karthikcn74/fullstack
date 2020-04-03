@@ -2,14 +2,16 @@
   "name": "mono-repo",
   "version": "0.0.0",
   "license": "MIT",
-  "main": "dist/main.js",
+  "main": "dist/apps/api/main.js",
   "engines": {
     "node": ">=8.0.0"
   },
   "scripts": {
     "ng": "ng",
     "nx": "nx",
-    "start": "node dist/apps/api/main.js",
+    "gcp-build": "rm -rf dist && ng build api",
+    "start": "npm run start:prod",
+    "start:prod": "node dist/apps/api/main.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "nx workspace-lint && ng lint",
@@ -44,6 +46,7 @@
     "@angular/service-worker": "9.0.0",
     "@capacitor/android": "^1.5.1",
     "@capacitor/core": "1.5.1",
+    "@google-cloud/debug-agent": "^4.2.2",
     "@ionic-native/core": "^5.22.0",
     "@ionic-native/http": "^5.22.0",
     "@ionic-native/native-page-transitions": "^5.22.0",
